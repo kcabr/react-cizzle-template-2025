@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Link as RouterLink, Outlet } from "@tanstack/react-router";
 import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
+import {
   AppBar,
   Box,
   Button,
@@ -118,6 +124,22 @@ export function Layout() {
                   {item.text}
                 </Button>
               ))}
+            </Box>
+            <Box sx={{ ml: 2, display: "flex", alignItems: "center" }}>
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <Button
+                    variant="outlined"
+                    color="inherit"
+                    sx={{ borderRadius: 2 }}
+                  >
+                    Sign In
+                  </Button>
+                </SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton afterSignOutUrl="/" />
+              </SignedIn>
             </Box>
           </Toolbar>
         </Container>
