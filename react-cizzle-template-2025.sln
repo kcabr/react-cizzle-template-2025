@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "react-cizzle-template-2025.client", "react-cizzle-template-2025.client\react-cizzle-template-2025.client.esproj", "{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "react-cizzle-template-2025.Server", "react-cizzle-template-2025.Server\react-cizzle-template-2025.Server.csproj", "{BA33FE4B-1D2E-4A2B-A4E0-A140F11DB216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A708C5-7B0A-B74A-28F3-CAFE1DA0937F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BA33FE4B-1D2E-4A2B-A4E0-A140F11DB216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA33FE4B-1D2E-4A2B-A4E0-A140F11DB216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA33FE4B-1D2E-4A2B-A4E0-A140F11DB216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA33FE4B-1D2E-4A2B-A4E0-A140F11DB216}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {225CED17-3A98-4A4F-957F-542F774D0E9C}
+	EndGlobalSection
+EndGlobal

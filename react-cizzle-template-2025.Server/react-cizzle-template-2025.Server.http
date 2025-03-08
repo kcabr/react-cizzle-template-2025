@@ -1,0 +1,6 @@
+@react_cizzle_template_2025.Server_HostAddress = http://localhost:5155
+
+GET {{react_cizzle_template_2025.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
