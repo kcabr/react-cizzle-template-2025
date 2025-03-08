@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   Box,
   CircularProgress,
-  Container,
   Link,
   Paper,
   Table,
@@ -105,7 +104,7 @@ function App() {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Box sx={{ width: "100%" }}>
       <Box sx={{ my: 4 }}>
         <Typography
           variant="h3"
@@ -121,7 +120,7 @@ function App() {
         </Typography>
         {renderContent()}
       </Box>
-    </Container>
+    </Box>
   );
 }
 

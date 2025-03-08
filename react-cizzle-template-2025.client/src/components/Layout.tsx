@@ -26,7 +26,7 @@ import InfoIcon from "@mui/icons-material/Info";
 interface NavItem {
   text: string;
   path: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 const navItems: NavItem[] = [
@@ -77,48 +77,50 @@ export function Layout() {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <CssBaseline />
-      <AppBar position="static">
-        <Toolbar>
-          {isMobile && (
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: "block" }}
-          >
-            React Weather App
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button
-                key={item.text}
-                component={RouterLink}
-                to={item.path}
-                sx={{
-                  color: "#fff",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "4px",
-                  "&.active": {
-                    backgroundColor: "rgba(255, 255, 255, 0.12)",
-                  },
-                }}
+      <AppBar position="static" sx={{ width: "100%" }}>
+        <Container maxWidth="lg">
+          <Toolbar disableGutters>
+            {isMobile && (
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2 }}
               >
-                {item.icon}
-                {item.text}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
+                <MenuIcon />
+              </IconButton>
+            )}
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: "block" }}
+            >
+              React Weather App
+            </Typography>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item.text}
+                  component={RouterLink}
+                  to={item.path}
+                  sx={{
+                    color: "#fff",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "4px",
+                    "&.active": {
+                      backgroundColor: "rgba(255, 255, 255, 0.12)",
+                    },
+                  }}
+                >
+                  {item.icon}
+                  {item.text}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </Container>
       </AppBar>
       <Box component="nav">
         <Drawer
@@ -139,7 +141,11 @@ export function Layout() {
           {drawer}
         </Drawer>
       </Box>
-      <Container component="main" sx={{ mt: 3, mb: 3, flexGrow: 1 }}>
+      <Container
+        component="main"
+        maxWidth="lg"
+        sx={{ mt: 3, mb: 3, flexGrow: 1, px: { xs: 2, sm: 3 } }}
+      >
         <Outlet />
       </Container>
       <Box
@@ -152,9 +158,10 @@ export function Layout() {
             theme.palette.mode === "light"
               ? theme.palette.grey[200]
               : theme.palette.grey[800],
+          width: "100%",
         }}
       >
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           <Typography variant="body1" align="center">
             &copy; {new Date().getFullYear()} React Weather App
           </Typography>

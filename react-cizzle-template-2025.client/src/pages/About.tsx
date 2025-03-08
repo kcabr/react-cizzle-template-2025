@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   Chip,
-  Container,
   Divider,
   Paper,
   Stack,
@@ -22,7 +21,7 @@ export function AboutPage() {
   ];
 
   return (
-    <Container maxWidth="md">
+    <Box sx={{ width: "100%" }}>
       <Box sx={{ my: 4 }}>
         <Typography
           variant="h3"
@@ -102,6 +101,6 @@ export function AboutPage() {
           </Typography>
         </Card>
       </Box>
-    </Container>
+    </Box>
   );
 }

@@ -2,7 +2,6 @@ import {
   Box,
   Card,
   CardContent,
-  Container,
   Grid,
   Typography,
   useTheme,
@@ -35,7 +34,7 @@ export function HomePage() {
   ];
 
   return (
-    <Container maxWidth="lg">
+    <Box sx={{ width: "100%" }}>
       <Box sx={{ my: 4, textAlign: "center" }}>
         <Typography
           variant="h2"
@@ -95,6 +94,6 @@ export function HomePage() {
           ))}
         </Grid>
       </Box>
-    </Container>
+    </Box>
   );
 }
