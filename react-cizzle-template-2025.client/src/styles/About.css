@@ -1,0 +1,50 @@
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+.about-section h2 {
+  color: #3498db;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.about-section p {
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.tech-list li {
+  color: #34495e;
+  padding: 0.25rem 0;
+}
