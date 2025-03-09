@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "@tanstack/react-router";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { StripeProvider } from "./components/StripeProvider";
+import { SubscriptionProvider } from "./context/SubscriptionContext";
 import { router } from "./router";
 import "./index.css";
 
@@ -52,11 +54,15 @@ void router.load();
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {/* @ts-expect-error - Type compatibility between router versions */}
-        <RouterProvider router={router} />
-      </ThemeProvider>
+      <StripeProvider>
+        <SubscriptionProvider>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {/* @ts-expect-error - Type compatibility between router versions */}
+            <RouterProvider router={router} />
+          </ThemeProvider>
+        </SubscriptionProvider>
+      </StripeProvider>
     </ClerkProvider>
   </StrictMode>
 );

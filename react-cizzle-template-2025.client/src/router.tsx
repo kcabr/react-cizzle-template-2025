@@ -3,6 +3,8 @@ import App from "./App";
 import { AboutPage } from "./pages/About";
 import { HomePage } from "./pages/Home";
 import { Layout } from "./components/Layout";
+import { SubscriptionPlans } from "./components/SubscriptionPlans";
+import { SubscriptionSuccess } from "./components/SubscriptionSuccess";
 
 // Define the root route with a layout component
 const rootRoute = new RootRoute({
@@ -28,8 +30,27 @@ const aboutRoute = new Route({
   component: AboutPage,
 });
 
+// Add subscription routes
+const subscriptionRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/subscription",
+  component: SubscriptionPlans,
+});
+
+const subscriptionSuccessRoute = new Route({
+  getParentRoute: () => rootRoute,
+  path: "/subscription/success",
+  component: SubscriptionSuccess,
+});
+
 // Create the route tree
-const routeTree = rootRoute.addChildren([indexRoute, weatherRoute, aboutRoute]);
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  weatherRoute,
+  aboutRoute,
+  subscriptionRoute,
+  subscriptionSuccessRoute,
+]);
 
 // Create the router
 export const router = new Router({

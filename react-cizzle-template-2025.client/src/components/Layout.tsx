@@ -28,6 +28,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import InfoIcon from "@mui/icons-material/Info";
+import CardMembershipIcon from "@mui/icons-material/CardMembership";
 
 interface NavItem {
   text: string;
@@ -38,6 +39,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { text: "Home", path: "/", icon: <HomeIcon /> },
   { text: "Weather", path: "/weather", icon: <WbSunnyIcon /> },
+  { text: "Subscription", path: "/subscription", icon: <CardMembershipIcon /> },
   { text: "About", path: "/about", icon: <InfoIcon /> },
 ];
 
